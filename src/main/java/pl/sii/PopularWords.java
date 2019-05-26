@@ -22,14 +22,17 @@ public class PopularWords {
 
         Map<String,Long> popular = new HashMap<>();
         String line;
-        Long number = 0L;
+        String words[];
         try {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/3esl.txt"));
             while ((line =br.readLine()) != null){
-                if(popular.get(line)==null) {
-                    popular.put(line, 1L);
-                } else
-                    popular.replace(line,popular.get(line)+1);
+                words = line.split(" ");
+                for (String w: words) {
+                    if(popular.get(w)==null) {
+                        popular.put(w, 1L);
+                    } else
+                        popular.replace(w,popular.get(w)+1);
+                }
             }
         } catch (IOException e){
             e.printStackTrace();

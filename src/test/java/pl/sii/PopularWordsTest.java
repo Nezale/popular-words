@@ -46,6 +46,7 @@ public class PopularWordsTest {
     }
 
     private Map<String, Long> getWordsFrequencyListCreatedByAdamKilgarriff() {
+
         throw new NotImplementedException("TODO implementation");
     }
 }
