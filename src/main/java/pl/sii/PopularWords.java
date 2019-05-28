@@ -37,13 +37,14 @@ public class PopularWords {
         } catch (IOException e){
             e.printStackTrace();
         }
-        return popular
+
+       return  popular
                 .entrySet()
                 .stream()
                 .sorted(comparingByValue(Comparator.reverseOrder()))
+                .limit(1000)
                 .collect(
-                        toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2,
+                        toMap(p -> p.getKey(), p -> p.getValue(), (p1, p2) -> p2,
                                 LinkedHashMap::new));
-
     }
 }
