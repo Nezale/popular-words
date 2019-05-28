@@ -17,6 +17,9 @@ To create a result for this task please:
 
 Please be accurate and attentive and include all corner cases. Good luck!
 
+## Solution
+I decided to separate words in lines because in file 3esl.txt duplicates didn't exist. There's a bug in PopularWordsTest. Frequencies of words in all.num are bad counted. I wanted to fix it, but because of inkathon and odyssey of the mind unfortunately I didn't have enough time to do that.
+
 ## Technical info
 Project requires:
 - Java SE 12
